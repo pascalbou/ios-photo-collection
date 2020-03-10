@@ -67,7 +67,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="hSM-8J-Wb5">
-                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IgB-Qh-eEC"/>
+                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IgB-Qh-eEC">
+                            <connections>
+                                <segue destination="JSj-Z2-Bb9" kind="presentation" identifier="ThemeSegue" id="mrR-in-hQJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fKM-AU-RWK">
                             <connections>
                                 <segue destination="cyf-9o-GZa" kind="show" identifier="AddPhotoSegue" id="ORf-uf-IdB"/>
@@ -126,6 +130,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7An-Tg-EoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1867" y="-183"/>
+        </scene>
+        <!--Theme Selection View Controller-->
+        <scene sceneID="ctv-dh-9Wf">
+            <objects>
+                <viewController id="JSj-Z2-Bb9" customClass="ThemeSelectionViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WQB-4c-4yR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdV-4E-Sko">
+                                <rect key="frame" x="32" y="0.0" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isb-DZ-S9e">
+                                <rect key="frame" x="39" y="73" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dark"/>
+                                <connections>
+                                    <action selector="selectDarkTheme:" destination="JSj-Z2-Bb9" eventType="touchUpInside" id="1jT-ms-IFv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPO-zw-xNb">
+                                <rect key="frame" x="356" y="73" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Blue"/>
+                                <connections>
+                                    <action selector="selectBlueTheme:" destination="JSj-Z2-Bb9" eventType="touchUpInside" id="DHC-RP-ZNt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JdV-4E-Sko" firstAttribute="leading" secondItem="jat-GF-Twt" secondAttribute="leading" constant="32" id="Heh-Z0-kbW"/>
+                            <constraint firstItem="jat-GF-Twt" firstAttribute="trailing" secondItem="JdV-4E-Sko" secondAttribute="trailing" constant="32" id="Hxh-wd-9q3"/>
+                            <constraint firstItem="JdV-4E-Sko" firstAttribute="top" secondItem="jat-GF-Twt" secondAttribute="top" id="gAI-d5-CFq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jat-GF-Twt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iP3-o7-PUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867" y="498"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kwI-mP-YKJ">
