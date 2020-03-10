@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,6 +57,7 @@
                                 <connections>
                                     <outlet property="photoImageView" destination="lvQ-8n-TAz" id="We4-cz-C9Z"/>
                                     <outlet property="photoLabel" destination="xOz-2b-M3i" id="aD8-Yc-y2v"/>
+                                    <segue destination="cyf-9o-GZa" kind="show" identifier="DetailPhotoSegue" id="Opx-PG-ecO"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -66,12 +68,64 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="hSM-8J-Wb5">
                         <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IgB-Qh-eEC"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fKM-AU-RWK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fKM-AU-RWK">
+                            <connections>
+                                <segue destination="cyf-9o-GZa" kind="show" identifier="AddPhotoSegue" id="ORf-uf-IdB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8N0-Um-wxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="-2.0089285714285712"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="Pv5-Kv-oIv">
+            <objects>
+                <viewController id="cyf-9o-GZa" customClass="PhotoDetailViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtZ-hR-RI3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k9U-QO-SbR">
+                                <rect key="frame" x="87" y="182" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UVy-rU-qVO">
+                                <rect key="frame" x="171" y="318" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhoto:" destination="cyf-9o-GZa" eventType="touchUpInside" id="vPl-ZU-VuT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-zo-EYI">
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2TT-gH-3mP"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bHC-gX-roo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rXf-Gt-hxp">
+                            <connections>
+                                <action selector="savePhoto:" destination="cyf-9o-GZa" id="rAY-pd-Aff"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="dlk-zo-EYI" id="kHG-kk-i9g"/>
+                        <outlet property="photoImageView" destination="k9U-QO-SbR" id="s5Q-bX-zsT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7An-Tg-EoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867" y="-183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kwI-mP-YKJ">
@@ -92,4 +146,7 @@
             <point key="canvasLocation" x="92.753623188405811" y="-2.0089285714285712"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Opx-PG-ecO"/>
+    </inferredMetricsTieBreakers>
 </document>

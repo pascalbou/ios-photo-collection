@@ -17,6 +17,7 @@
 		3F21B54724180FFE00A49FA4 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21B54624180FFE00A49FA4 /* ThemeHelper.swift */; };
 		3F21B5492418137800A49FA4 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21B5482418137800A49FA4 /* PhotosCollectionViewController.swift */; };
 		3F21B54B2418142D00A49FA4 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21B54A2418142D00A49FA4 /* PhotosCollectionViewCell.swift */; };
+		3F21B54D2418171700A49FA4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21B54C2418171700A49FA4 /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3F21B54624180FFE00A49FA4 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		3F21B5482418137800A49FA4 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		3F21B54A2418142D00A49FA4 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F21B54C2418171700A49FA4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3F21B53024180E7F00A49FA4 /* SceneDelegate.swift */,
 				3F21B53424180E7F00A49FA4 /* Main.storyboard */,
 				3F21B54A2418142D00A49FA4 /* PhotosCollectionViewCell.swift */,
+				3F21B54C2418171700A49FA4 /* PhotoDetailViewController.swift */,
 				3F21B5482418137800A49FA4 /* PhotosCollectionViewController.swift */,
 				3F21B53724180E8000A49FA4 /* Assets.xcassets */,
 				3F21B53924180E8000A49FA4 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				3F21B54524180F0600A49FA4 /* PhotoController.swift in Sources */,
 				3F21B5492418137800A49FA4 /* PhotosCollectionViewController.swift in Sources */,
 				3F21B54724180FFE00A49FA4 /* ThemeHelper.swift in Sources */,
+				3F21B54D2418171700A49FA4 /* PhotoDetailViewController.swift in Sources */,
 				3F21B53124180E7F00A49FA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
