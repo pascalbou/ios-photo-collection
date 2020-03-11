@@ -19,7 +19,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         case "Blue":
             self.view.backgroundColor = .blue
         default:
-            self.view.backgroundColor = .black
+            self.view.backgroundColor = .darkGray
         }
         
     }
