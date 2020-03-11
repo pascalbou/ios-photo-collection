@@ -42,7 +42,7 @@ class PhotoDetailViewController: UIViewController {
         case "Blue":
             self.view.backgroundColor = .blue
         default:
-            self.view.backgroundColor = .black
+            self.view.backgroundColor = .darkGray
         }
     }
     
@@ -50,6 +50,7 @@ class PhotoDetailViewController: UIViewController {
         guard let photo = photo else { return }
         let image = UIImage(data: photo.imageData)
         photoImageView.image = image
+        descriptionTextField.text = photo.title
     }
     
     override func viewDidLoad() {
@@ -58,7 +59,7 @@ class PhotoDetailViewController: UIViewController {
         setTheme()
         updateViews()
         
-
+        imagePicker.delegate = self
     }
     
 
@@ -69,6 +70,10 @@ extension PhotoDetailViewController: UIImagePickerControllerDelegate, UINavigati
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             photoImageView.image = pickedImage
         }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker.dismiss(animated: true, completion: nil)
     }
     

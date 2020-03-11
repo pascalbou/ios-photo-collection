@@ -26,6 +26,12 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTheme()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setTheme()
+        collectionView.reloadData()
     }
 
     // MARK: UICollectionViewDataSource
