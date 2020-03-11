@@ -13,7 +13,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     let photoController = PhotoController()
     let themeHelper = ThemeHelper()
     
-    func setTheme() {
+    private func setTheme() {
         guard let themePreference = themeHelper.themePreference else { return }
         switch themePreference {
         case "Blue":
@@ -26,7 +26,6 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {
