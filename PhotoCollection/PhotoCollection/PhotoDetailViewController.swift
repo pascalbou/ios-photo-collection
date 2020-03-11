@@ -35,7 +35,7 @@ class PhotoDetailViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func setTheme() {
+    private func setTheme() {
         guard let themeHelper = themeHelper else { return }
         guard let themePreference = themeHelper.themePreference else { return }
         switch themePreference {
